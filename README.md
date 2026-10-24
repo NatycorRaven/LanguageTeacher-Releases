@@ -1,30 +1,34 @@
-# LanguageTeacher 安卓下载
+# LanguageTeacher Android Download
 
-面向中国上班族的英日韩外语学习 App。源码和设计在私有仓库管理，这里提供开发体验 APK 与版本索引。
+**[Download 0.3.0-dev APK](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.3.0-dev/LanguageTeacher-0.3.0-dev.apk)**
 
-## 当前版本：0.2.0 文字学习交互体验版
+[Release](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/tag/v0.3.0-dev) | [SHA-256](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.3.0-dev/sha256.txt) | [Download QR](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.3.0-dev/LanguageTeacher-0.3-download-qr.png)
 
-**[点击下载安卓 APK](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.2.0-dev/LanguageTeacher-0.2.0-dev.apk)**
+真人视频口语免费接入试验：从首页进入视频课，接入原生WebRTC、麦克风、字幕、静音、打断与本地学习记录。保留原有英日韩文字课堂、基础小测、计划和词句复盘。
 
-[版本说明与附件](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/tag/v0.2.0-dev) · [全部版本](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases) · [SHA-256 校验](https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.2.0-dev/sha256.txt)
+**尚未使用真实LiveAvatar Key验收视频链路。** 本版提供App内配置入口，需安装后填写自己的免费账户Key，确认MIX Flip及所在网络的实际效果；自动化媒体替身测试不代表真人通话已经通过。
 
-Android 8.0 及以上。手机下载 APK 后打开，按系统提示允许浏览器或文件管理器安装。0.1 用户可直接覆盖安装，无须卸载；同签名升级保留会话已在模拟器验证。
+## 手机使用
 
-## 可以体验
+1. Android 8.0+ 下载APK覆盖安装，无须卸载0.2。
+2. 首页点击“开始视频口语练习”，通过页面入口注册LiveAvatar免费账户，获取自己的API Key，在App中“保存并检测”。不要在聊天里发送Key。
+3. 保持默认Sandbox，授权麦克风后开始；约一分钟、固定Wayne真人形象、不消耗credits。
+4. 可静音、打断或结束。最终字幕保存在本地，结束后可查看记录并用已有教学模型生成复盘。
 
-- 首次学习偏好、今日／练习／记忆／我的四页导航。
-- 英日韩 18 个职场和旅行场景，表达提示、开场示范、每语五题基础小测和按时间调整的规则计划。
-- 配置 DeepSeek 或兼容 HTTPS 服务，与文字家教对话、重试失败请求、继续历史课堂。
-- 生成引用对话原文的地道表达和单词复盘，翻面回忆并自评熟悉。
+视频试验使用LiveAvatar托管的语音及教学模型；DeepSeek仍用于文字课堂与复盘，其Key不会上传视频服务。
 
-安装后进入“我的”填写自己的 API Key，保存配置并测试连接，再从“练习”开始课堂。默认 API 基础地址 https://api.deepseek.com ，模型名称 deepseek-flash 可修改，以账户实际支持为准。测试及课堂请求会产生自己服务商账户用量；对话上下文发送至配置的地址，Key 加密保存在本机。
+## 免费边界与已知限制
 
-无需 Key 可使用小测、计划与场景提示。本轮自动化使用合成模型替身，未以真实 Key 验收 DeepSeek 服务，请配置后自行确认连接、额度与教学效果。小测仅五题，不等同完整口语或发音评级。
+- Sandbox约一分钟；普通Free账户另有10 credits/月、单次两分钟限制，需在App显式确认切换。不是无限免费。已付费或已开启超额的账户可能计费，以服务商设置为准；App不购买套餐或开启超额。
+- 英日韩官方能力列表已核验，识别、口音、延迟及大陆网络仍需分别实测。
+- 不采集摄像头，没有视觉教学、账号云备份、客观发音评分或内置更新。卸载会清除本地数据。
+- APK包含原生媒体库，体积较文字版增大。
 
-## 当前边界
+## 验证
 
-开发预览尚无账号云备份、语音、真人数字人、视频聊天、摄像头教学或内置自动更新。记录只在本机，卸载会清除；卡片熟悉度是自评，尚无间隔复习调度。
+41项单元测试、28项模拟器设备测试通过；Lint与构建通过。同签名0.2→0.3覆盖升级保留合成记录已验证。课堂与媒体测试使用合成替身，无真实凭据。源码实现提交：f37be7dd9d7a051062b150d8a90878b83e0af7f5。
 
-后续渠道保持相同开发签名及包名，版本代码递增。其他机器或 CI 临时签名构建不保证能覆盖此渠道。
+附件APK、sha256.txt及下载二维码。请从本仓库下载，开发签名与0.1/0.2保持一致。
 
-`latest.json` 仅是发布元数据；开发预发布请使用具体版本页或全部版本页，不依赖 GitHub 的 `/releases/latest`。
+
+`latest.json` records distribution metadata; the app does not check for updates automatically. Source remains private. This public repository contains download notes and metadata only.
