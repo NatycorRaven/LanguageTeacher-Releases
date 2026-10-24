@@ -1,0 +1,12 @@
+{
+  "versionCode": 1,
+  "versionName": "0.1.0-dev",
+  "packageName": "com.languageteacher.memory",
+  "minSdk": 26,
+  "apkUrl": "https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/download/v0.1.0-dev/LanguageTeacher-0.1.0-dev.apk",
+  "sha256": "b4d6381785d88e2b171806c4635a0f21e595123989d1517e95202a1f711d9e63",
+  "signingCertificateSha256": "f33d2d2726c3e4faeaf86091555bf0d87d02758c9983e29968f17c38a5b0bf48",
+  "sourceCommit": "ed71a1a49c8596fe00879f42e3984b05d34c3f1f",
+  "releaseUrl": "https://github.com/NatycorRaven/LanguageTeacher-Releases/releases/tag/v0.1.0-dev",
+  "channel": "development-preview"
+}
